@@ -24,7 +24,7 @@ int main() {
         cout << "2. Galimybe isigyti valiutos (t. y. pirkti valiuta)." << endl;
         cout << "3. Galimybe parduoti valiuta (t. y. parduoti valiuta)." << endl;
         cout << "0. Iseiti." << endl;
-        cout << "Jusu pasirinkimas: "; // kodel tarpo nera po :, kai paleidziu programa?
+        cout << "Jusu pasirinkimas: "; // kodel tarpo nera po : console, kai paleidziu programa?
         cin >> pasirinkimas;
 
         if (pasirinkimas == 0) {
@@ -55,6 +55,10 @@ int main() {
                 case 2:
                 cout << "Iveskite kiek euru norite keisti i " << valiuta << ": ";
                 cin >> kiekis;
+                if (kiekis <= 0) {
+                    cout << "Kiekis negali buti 0 arba neigiamas skaicius." << endl;
+                    break;
+                }
 
                 if (valiuta == "GBP" || valiuta == "gbp") {
                     rezultatas = kiekis * GBP_Pirkti;
@@ -75,6 +79,10 @@ int main() {
                 case 3:
                 cout << "Iveskite kiek " << valiuta << " norite parduoti: ";
                 cin >> kiekis;
+                if (kiekis <= 0) {
+                    cout << "Kiekis negali buti 0 arba neigiamas skaicius." << endl;
+                    break;
+                }
 
                 if (valiuta == "GBP" || valiuta == "gbp") {
                     rezultatas = kiekis * GBP_Parduoti;
