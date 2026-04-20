@@ -15,7 +15,7 @@ int main() {
     int pasirinkimas;
     bool isRunning = true;
     string ieskomasVardas;
-    bool rastas = false;
+
 
 
     while (isRunning) {
@@ -50,11 +50,11 @@ int main() {
                 pazymiuKiekis[mokiniuKiekis] = pazKiekis;
 
                 for (int i = 0; i < pazKiekis; i++) {
-                    cout << "Iveskite " << (i + 1) << "-aji pazumi: ";
+                    cout << "Iveskite " << (i + 1) << "-aji pazymi: ";
                     cin >> pazymiai[mokiniuKiekis][i];
 
-                    if (pazymiai[mokiniuKiekis][i] || pazymiai[mokiniuKiekis][i] > 10) {
-                        cout << "Pazymus turi buti nuo 1 iki 10. Iveskite is naujo: ";
+                    if (pazymiai[mokiniuKiekis][i] < 1 || pazymiai[mokiniuKiekis][i] > 10) {
+                        cout << "Pazymys turi buti nuo 1 iki 10. Iveskite is naujo: " << endl;
                         i--;
                     }
                 }
@@ -65,7 +65,7 @@ int main() {
             }
             case 2: {
                 if (mokiniuKiekis == 0) {
-                    cout << "Mokiniu saras tuscias." << endl;
+                    cout << "Mokiniu sarasas tuscias." << endl;
                     break;
                 }
 
@@ -81,9 +81,10 @@ int main() {
             }
             case 3: {
                 if (mokiniuKiekis == 0) {
-                    cout << "Mokiniu saras tuscias." << endl;
+                    cout << "Mokiniu sarasas tuscias." << endl;
                     break;
                 }
+                bool rastas = false;
 
                 cout << "Iveskite mokinio varda: ";
                 cin >> ieskomasVardas;
@@ -110,6 +111,7 @@ int main() {
                     cout << "Mokiniu sarasas tuscias." << endl;
                     break;
                 }
+                bool rastas = false;
 
                 cout << "Iveskite mokinio varda: ";
                 cin >> ieskomasVardas;
@@ -159,7 +161,6 @@ int main() {
                     break;
                 }
 
-                string ieskomasVardas;
                 bool rastas = false;
 
                 cout << "Iveskite mokinio varda, kuri norite pasalinti: ";
@@ -191,7 +192,7 @@ int main() {
             }
             case 0:
                 isRunning = false;
-                cout << "Programa baigta" << endl;
+                cout << "Programa baigta." << endl;
                 break;
 
 
