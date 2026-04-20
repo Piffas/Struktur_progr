@@ -43,7 +43,7 @@ int main() {
                 cin >> pazKiekis;
 
                 if (pazKiekis > MAX_PAZYMIU || pazKiekis < 1) {
-                    cout << "Neteisingas pazymiu kiekis." << endl;
+                    cout << "Pazymiu kiekis netinkamas." << endl;
                     break;
                 }
 
@@ -53,7 +53,7 @@ int main() {
                     cout << "Iveskite " << (i + 1) << "-aji pazymi: ";
                     cin >> pazymiai[mokiniuKiekis][i];
 
-                    if (pazymiai[mokiniuKiekis][i] < 1 || pazymiai[mokiniuKiekis][i] > 10) {
+                    if (pazymiai[mokiniuKiekis][i] < 1 || pazymiai[mokiniuKiekis][i] > 10) { //turi buti ir =
                         cout << "Pazymys turi buti nuo 1 iki 10. Iveskite is naujo: " << endl;
                         i--;
                     }
@@ -91,7 +91,7 @@ int main() {
 
                 for (int i = 0; i < mokiniuKiekis; i++) {
                     if (ieskomasVardas == vardai[i]) {
-                        cout << "Mokinys " << vardai[i] << " ir jo pazymiai: ";
+                        cout << "Mokinys " << vardai[i] << " ir jos/jo pazymiai: ";
                         for (int j = 0; j < pazymiuKiekis[i]; j++) {
                             cout << pazymiai[i][j] << " ";
                         }
