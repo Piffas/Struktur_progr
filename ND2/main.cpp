@@ -4,7 +4,7 @@
 using namespace std;
 
 int main() {
-    const int MAX_MOKINIU = 3; // negalima keisti kiekio - const; testavimui 3 mokiniai - atkeisti!!
+    const int MAX_MOKINIU = 100; // negalima keisti kiekio - const; testavimui 3 mokiniai - atkeisti!!
     const int MAX_PAZYMIU = 10;
 
     string vardai[MAX_MOKINIU];
