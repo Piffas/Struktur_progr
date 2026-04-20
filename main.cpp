@@ -73,7 +73,7 @@ int main() {
                     cout << "Tokios valiutos duomenu bazeje nera." << endl;
                     break;
                 }
-                printf("Jus gausite: %.2f EUR\n", rezultatas);
+                printf("Jus gausite: %.2f %s\n", rezultatas, valiuta.c_str());
                 break;
 
                 case 3:
