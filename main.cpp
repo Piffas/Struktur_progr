@@ -1,4 +1,5 @@
 #include <iostream>
+#include <iomanip>
 using namespace std;
 
 int main() {
@@ -73,7 +74,8 @@ int main() {
                     cout << "Tokios valiutos duomenu bazeje nera." << endl;
                     break;
                 }
-                printf("Jus gausite: %.2f %s\n", rezultatas, valiuta.c_str());
+                cout << fixed << setprecision(2);
+                cout << "Jus gausite: " << rezultatas << " " << valiuta << endl;
                 break;
 
                 case 3:
@@ -98,7 +100,8 @@ int main() {
                     break;
                 }
 
-                printf("Jus gausite: %.2f EUR\n", rezultatas);
+                cout << fixed << setprecision(2);
+                cout << "Jus gausite: " << rezultatas << " EUR" << endl;
                 break;
 
             default:
