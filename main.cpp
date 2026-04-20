@@ -37,13 +37,13 @@ int main() {
 
         switch (pasirinkimas) {
             case 1:
-                if (valiuta == "GBP") {
+                if (valiuta == "GBP" || valiuta == "gbp") {
                     rezultatas = GBP_Bendras;
                 }
-                else if (valiuta == "USD") {
+                else if (valiuta == "USD" || valiuta == "usd") {
                     rezultatas = USD_Bendras;
                 }
-                else if (valiuta == "INR") {
+                else if (valiuta == "INR" || valiuta == "inr") {
                     rezultatas = INR_Bendras;
                 }
                 else {
@@ -56,13 +56,13 @@ int main() {
                 cout << "Iveskite kiek euru norite keisti i " << valiuta << ": ";
                 cin >> kiekis;
 
-                if (valiuta == "GBP") {
+                if (valiuta == "GBP" || valiuta == "gbp") {
                     rezultatas = kiekis * GBP_Pirkti;
                 }
-                else if (valiuta == "USD") {
+                else if (valiuta == "USD" || valiuta == "usd") {
                     rezultatas = kiekis * USD_Pirkti;
                 }
-                else if (valiuta == "INR") {
+                else if (valiuta == "INR" || valiuta == "inr") {
                     rezultatas = kiekis * INR_Pirkti;
                 }
                 else {
@@ -76,13 +76,13 @@ int main() {
                 cout << "Iveskite kiek " << valiuta << " norite parduoti: ";
                 cin >> kiekis;
 
-                if (valiuta == "GBP") {
+                if (valiuta == "GBP" || valiuta == "gbp") {
                     rezultatas = kiekis * GBP_Parduoti;
                 }
-                else if (valiuta == "USD") {
+                else if (valiuta == "USD" || valiuta == "usd") {
                     rezultatas = kiekis * USD_Parduoti;
                 }
-                else if (valiuta == "INR") {
+                else if (valiuta == "INR" || valiuta == "inr") {
                     rezultatas = kiekis * INR_Parduoti;
                 }
                 else {
