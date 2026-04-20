@@ -6,7 +6,7 @@ int main() {
     int pasirinkimas;
     string valiuta;
     double kiekis, rezultatas;
-    bool testi = true;
+    bool isRunning = true;
 
     double GBP_Bendras   = 0.8729;
     double GBP_Pirkti    = 0.8600;
@@ -19,7 +19,7 @@ int main() {
     double INR_Parduoti  = 107.8546;
 
     cout << "Valiutos keitykla (EUR):" << endl;
-    while (testi) {
+    while (isRunning) {
         cout << "\n Pasirinkite veiksma:" << endl;
         cout << "1. Valiutos kurso palyginimas su kita valiuta." << endl;
         cout << "2. Galimybe isigyti valiutos (t. y. pirkti valiuta)." << endl;
@@ -29,7 +29,7 @@ int main() {
         cin >> pasirinkimas;
 
         if (pasirinkimas == 0) {
-            testi = false;
+            isRunning = false;
             break;
         }
 
