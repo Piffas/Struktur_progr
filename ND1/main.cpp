@@ -87,13 +87,13 @@ int main() {
                 }
 
                 if (valiuta == "GBP" || valiuta == "gbp") {
-                    rezultatas = kiekis * GBP_Parduoti;
+                    rezultatas = kiekis / GBP_Parduoti;
                 }
                 else if (valiuta == "USD" || valiuta == "usd") {
-                    rezultatas = kiekis * USD_Parduoti;
+                    rezultatas = kiekis / USD_Parduoti;
                 }
                 else if (valiuta == "INR" || valiuta == "inr") {
-                    rezultatas = kiekis * INR_Parduoti;
+                    rezultatas = kiekis / INR_Parduoti;
                 }
                 else {
                     cout << "Tokios valiutos duomenu bazeje nera." << endl;
