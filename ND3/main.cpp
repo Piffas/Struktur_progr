@@ -26,9 +26,9 @@ void getData(menuItemType menuList[], int& menuCount) {
     menuCount = 0;
 
     while (getline(file, line) && menuCount < MENU_SIZE) {
-        int separator = line.find(';');
+        size_t separator = line.find(';');
 
-        if (separator != -1) {
+        if (separator != string::npos) {
             menuList[menuCount].menuItem = line.substr(0, separator);
             menuList[menuCount].menuPrice = stod(line.substr(separator + 1));
             menuCount++;
@@ -40,7 +40,7 @@ void getData(menuItemType menuList[], int& menuCount) {
 
 // Funkcija parodo pusryciu meniu vartotojui
 void showMenu(menuItemType menuList[], int menuCount) {
-    cout << "Sveiki atvyke i restorana \"Pavadinimas\"" << endl << endl;
+    cout << "Sveiki atvyke i restorana \"Jusras\"" << endl << endl;
     cout << "Pusryciu meniu:" << endl;
 
     cout << fixed << setprecision(2);
