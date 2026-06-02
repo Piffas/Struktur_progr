@@ -18,7 +18,7 @@ void getData(menuItemType menuList[], int& menuCount) {
     ifstream file("menu.txt");
 
     if (!file) {
-        cout << "Klaida: nepavyko atidaryti menu.txt failo." << endl;
+        cout << "Klai1da: nepavyko atidaryti menu.txt failo." << endl;
         return;
     }
 
@@ -26,7 +26,7 @@ void getData(menuItemType menuList[], int& menuCount) {
     menuCount = 0;
 
     while (getline(file, line) && menuCount < MENU_SIZE) { // skaitom faila po viena eilute iki 8
-        size_t separator = line.find(';'); // o kas jei du ; bus?
+        size_t separator = line.find(';'); // o kas jei du ; bus? Nieko :D
 
         if (separator != string::npos) { // tikrinama iki kol randam
             menuList[menuCount].menuItem = line.substr(0, separator);
