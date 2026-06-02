@@ -1,4 +1,4 @@
-Kiausiniene;1.45;hello
+Kiausiniene;1.45
 Kiaulienos sonine su keptu kiausiniu;2.45
 Keksiukas su vysnia;0.99
 Prancuziskas skrebutis;1.99
