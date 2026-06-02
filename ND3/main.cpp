@@ -40,7 +40,7 @@ void getData(menuItemType menuList[], int& menuCount) {
 
 // Funkcija parodo pusryciu meniu vartotojui
 void showMenu(menuItemType menuList[], int menuCount) {
-    cout << "Sveiki atvyke i restorana \"Jusras\"" << endl << endl;
+    cout << "Restoranas \"Jusras\"!" << endl << endl;
     cout << "Pusryciu meniu:" << endl;
 
     cout << fixed << setprecision(2);
