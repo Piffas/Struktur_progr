@@ -1,16 +1,16 @@
 #include <iostream>
-#include <fstream>
-#include <iomanip>
+#include <fstream> // biblioteka failams
+#include <iomanip> // formatavimui
 #include <string>
 
 using namespace std;
 
-const int MENU_SIZE = 8;
-const double PVM = 0.21;
+constexpr int MENU_SIZE = 8; // galima ir su const, bet meta warning
+constexpr double PVM = 0.21;
 
 struct menuItemType {
     string menuItem;     // patiekalo pavadinimas
-    double menuPrice;    // patiekalo kaina
+    double menuPrice = 0.0;    // patiekalo kaina
 };
 
 // Funkcija nuskaito meniu duomenis is menu.txt failo
@@ -25,12 +25,12 @@ void getData(menuItemType menuList[], int& menuCount) {
     string line;
     menuCount = 0;
 
-    while (getline(file, line) && menuCount < MENU_SIZE) {
-        size_t separator = line.find(';');
+    while (getline(file, line) && menuCount < MENU_SIZE) { // skaitom faila po viena eilute iki 8
+        size_t separator = line.find(';'); // o kas jei du ; bus?
 
-        if (separator != string::npos) {
+        if (separator != string::npos) { // tikrinama iki kol randam
             menuList[menuCount].menuItem = line.substr(0, separator);
-            menuList[menuCount].menuPrice = stod(line.substr(separator + 1));
+            menuList[menuCount].menuPrice = stod(line.substr(separator + 1)); // stod - string to double
             menuCount++;
         }
     }
@@ -46,9 +46,9 @@ void showMenu(menuItemType menuList[], int menuCount) {
     cout << fixed << setprecision(2);
 
     for (int i = 0; i < menuCount; i++) {
-        cout << i + 1 << ". "
-             << left << setw(45) << menuList[i].menuItem
-             << right << setw(6) << menuList[i].menuPrice << " EUR" << endl;
+        cout << i + 1 << ". " // kad prasidetu ne nuo 0 sarasas, o nuo 1
+             << left << setw(45) << menuList[i].menuItem // 45 simboliu plocio laukas
+             << right << setw(6) << menuList[i].menuPrice << " EUR" << endl; // 6 simboliu plocio laukas
     }
 
     cout << endl;
@@ -65,7 +65,7 @@ void printCheck(menuItemType menuList[], int menuCount, int portions[]) {
         return;
     }
 
-    double subtotal = 0;
+    double subtotal = 0; // suma be pvm
 
     cout << endl;
     cout << "Sveiki atvyke i restorana \"Jusras\"" << endl << endl;
