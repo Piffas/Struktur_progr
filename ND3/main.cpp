@@ -75,8 +75,8 @@ void printCheck(menuItemType menuList[], int menuCount, int portions[]) {
     cout << fixed << setprecision(2);
     receipt << fixed << setprecision(2);
 
-    for (int i = 0; i < menuCount; i++) {
-        if (portions[i] > 0) {
+    for (int i = 0; i < menuCount; i++) { // eina per meniu patiekalus
+        if (portions[i] > 0) { // paziuri ar pasirinko ir kiek
             double itemTotal = portions[i] * menuList[i].menuPrice;
             subtotal += itemTotal;
 
@@ -146,8 +146,8 @@ int main() {
             if (quantity <= 0) {
                 cout << "Porciju kiekis turi buti didesnis uz 0." << endl;
             } else {
-                portions[choice - 1] += quantity;
-                cout << "Patiekalas pridetas i uzsakyma." << endl;
+                portions[choice - 1] += quantity; // masyvas nuo 0, o choice nuo 1, del to - 1
+                cout << "Patiekalas pridetas i uzsakyma. Jei norite uzbaigti uzsakyma, iveskite 0." << endl;
             }
         }
 
