@@ -68,9 +68,9 @@ void printCheck(menuItemType menuList[], int menuCount, int portions[]) {
     double subtotal = 0; // suma be pvm
 
     cout << endl;
-    cout << "Sveiki atvyke i restorana \"Jusras\"" << endl << endl;
+    cout << "Restoranas \"Jusras\"!" << endl << endl;
 
-    receipt << "Sveiki atvyke i restorana \"Jusras\"" << endl << endl;
+    receipt << "Restoranas \"Jusras\"" << endl << endl;
 
     cout << fixed << setprecision(2);
     receipt << fixed << setprecision(2);
